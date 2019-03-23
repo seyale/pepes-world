@@ -27,6 +27,6 @@ class EventsController < ApplicationController
   end
 
   def event_params
-    params.require(:animal).permit(:title, :date, :place, :photo, :description, :kid_id, :user_id)
+    params.require(:event).permit(:title, :date, :place, :photo, :description, :kid_id, :user_id)
   end
 end
