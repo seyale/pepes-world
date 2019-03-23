@@ -5,6 +5,7 @@
 <% @events.each do |event| %>
 <%= event.title %>
 <%= event.date %>
+<%= link_to "show memory", event_path(event) %>
 <% end %>
 
 <%= link_to "+", new_event_path %>

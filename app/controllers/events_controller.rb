@@ -1,5 +1,7 @@
 class EventsController < ApplicationController
 
+  before_action :set_event, only: [:show]
+
   def new
     @event = Event.new
   end
@@ -14,7 +16,15 @@ class EventsController < ApplicationController
     end
   end
 
+  def show
+    @event = Event.new
+  end
+
   private
+
+  def set_event
+    @event = Event.find(params[:id])
+  end
 
   def event_params
     params.require(:animal).permit(:title, :date, :place, :photo, :description, :kid_id, :user_id)
