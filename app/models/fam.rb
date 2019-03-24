@@ -1,5 +1,5 @@
 class Fam < ApplicationRecord
-  belongs_to :users
-  belongs_to :kids
-  belongs_to :events
+  has_many :users
+  has_many :kids
+  has_many :events
 end

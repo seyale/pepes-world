@@ -23,10 +23,18 @@ ActiveRecord::Schema.define(version: 2019_03_18_145551) do
     t.text "description"
     t.bigint "kid_id"
     t.bigint "user_id"
+    t.bigint "fam_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["fam_id"], name: "index_events_on_fam_id"
     t.index ["kid_id"], name: "index_events_on_kid_id"
     t.index ["user_id"], name: "index_events_on_user_id"
+  end
+
+  create_table "fams", force: :cascade do |t|
+    t.string "family_name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "kids", force: :cascade do |t|
@@ -52,6 +60,7 @@ ActiveRecord::Schema.define(version: 2019_03_18_145551) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "events", "fams"
   add_foreign_key "events", "kids"
   add_foreign_key "events", "users"
 end
