@@ -1,6 +1,7 @@
 class Event < ApplicationRecord
   belongs_to :kid
   belongs_to :user
+  belongs_to :fam
 
   validates :title, presence: true
   validates :date, presence: true

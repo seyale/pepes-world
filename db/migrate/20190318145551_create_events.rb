@@ -8,6 +8,7 @@ class CreateEvents < ActiveRecord::Migration[5.2]
       t.text :description
       t.references :kid, foreign_key: true
       t.references :user, foreign_key: true
+      t.references :fam, foreign_key: true
 
       t.timestamps
     end

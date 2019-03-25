@@ -36,6 +36,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
       t.string :last_name
       t.string :role
       t.string :photo
+      t.references :fam, foreign_key: true
 
       t.timestamps null: false
     end
