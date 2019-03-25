@@ -40,8 +40,10 @@ ActiveRecord::Schema.define(version: 2019_03_18_145551) do
   create_table "kids", force: :cascade do |t|
     t.string "name"
     t.string "photo"
+    t.bigint "fam_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["fam_id"], name: "index_kids_on_fam_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -54,13 +56,17 @@ ActiveRecord::Schema.define(version: 2019_03_18_145551) do
     t.string "last_name"
     t.string "role"
     t.string "photo"
+    t.bigint "fam_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["fam_id"], name: "index_users_on_fam_id"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
   add_foreign_key "events", "fams"
   add_foreign_key "events", "kids"
   add_foreign_key "events", "users"
+  add_foreign_key "kids", "fams"
+  add_foreign_key "users", "fams"
 end
