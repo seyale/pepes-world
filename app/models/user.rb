@@ -5,7 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :events
-  has_many :kids, through: :events
+  has_many :kids, through: :fams
+  belongs_to :fam
 
   validates :first_name, presence: true
   validates :role, presence: true
