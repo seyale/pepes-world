@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_18_145551) do
+ActiveRecord::Schema.define(version: 2019_03_31_083015) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,31 +19,21 @@ ActiveRecord::Schema.define(version: 2019_03_18_145551) do
     t.string "title"
     t.date "date"
     t.string "place"
-    t.string "photo"
     t.text "description"
     t.bigint "kid_id"
     t.bigint "user_id"
-    t.bigint "fam_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["fam_id"], name: "index_events_on_fam_id"
+    t.string "photo"
     t.index ["kid_id"], name: "index_events_on_kid_id"
     t.index ["user_id"], name: "index_events_on_user_id"
   end
 
-  create_table "fams", force: :cascade do |t|
-    t.string "family_name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "kids", force: :cascade do |t|
     t.string "name"
-    t.string "photo"
-    t.bigint "fam_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["fam_id"], name: "index_kids_on_fam_id"
+    t.string "photo"
   end
 
   create_table "users", force: :cascade do |t|
@@ -56,17 +46,12 @@ ActiveRecord::Schema.define(version: 2019_03_18_145551) do
     t.string "last_name"
     t.string "role"
     t.string "photo"
-    t.bigint "fam_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["fam_id"], name: "index_users_on_fam_id"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "events", "fams"
   add_foreign_key "events", "kids"
   add_foreign_key "events", "users"
-  add_foreign_key "kids", "fams"
-  add_foreign_key "users", "fams"
 end

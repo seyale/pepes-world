@@ -1,10 +1,12 @@
 <h2>Create a new memory</h2>
 
 <%= simple_form_for(@event) do |f| %>
+<%= f.error :base %>
 <%= f.input :title %>
 <%= f.date_field :date %>
 <%= f.input :place %>
 <%= f.input :description %>
+<%= f.input :kid_id %>
 <%= f.input :photo %>
 <%= f.input :photo_cache, as: :hidden %>
 <%= f.button :submit %>
