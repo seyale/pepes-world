@@ -3,6 +3,8 @@
 
 
 <% @events.each do |event| %>
+<!-- Uncomment when style defined -->
+<!-- <img src="<%= event.photo  %>"/> -->
 <%= event.title %>
 <%= event.date %>
 <%= link_to "show memory", event_path(event) %>

@@ -4,6 +4,7 @@ class EventsController < ApplicationController
 
   def new
     @event = Event.new
+    @all_kids = Kid.all
   end
 
   def create
