@@ -2,6 +2,6 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:home]
 
   def home
-    @events = Event.all.order(date: :asc)
+    @events = Event.all.order(date: :desc)
   end
 end
