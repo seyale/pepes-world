@@ -4,11 +4,13 @@ class EventsController < ApplicationController
 
   def new
     @event = Event.new
+    @all_kids = Kid.all
   end
 
   def create
     @event = Event.new(event_params)
     @event.user = current_user
+
     if @event.save
       redirect_to root_path
     else
