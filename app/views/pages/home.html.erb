@@ -1,14 +1,27 @@
 <h1>Pages#home</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
 
-
-<% @events.each do |event| %>
-<!-- Uncomment when style defined -->
-<!-- <img src="<%= event.photo  %>"/> -->
-<%= event.title %>
-<%= event.date %>
-<%= link_to "show memory", event_path(event) %>
-<% end %>
-
 <%= link_to "+ new memory", new_event_path %>
+
+
+<div class="event-container">
+  <div class="event-row">
+    <div class="col-xs-12">
+
+    <% @events.each do |event| %>
+      <div class="event-card">
+        <%= event.date %>
+        <img src="<%= event.photo  %>"/>
+        <%= event.title %>
+        <%= link_to "show memory", event_path(event) %>
+        <% end %>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- delete if statement as soon as user has the option to add kids -->
+<% if false %>
 <%= link_to "+ add kid", new_kid_path %>
+<% end %>
