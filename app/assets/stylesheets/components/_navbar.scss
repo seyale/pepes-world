@@ -26,3 +26,17 @@
   width: 50px;
   cursor: pointer;
 }
+
+.add-event {
+  position: fixed;
+  bottom:0%;
+  width:100%;
+}
+
+.add-event img {
+  width: 50px;
+  float: center;
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 40px;
+}
