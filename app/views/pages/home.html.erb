@@ -10,12 +10,12 @@
 
     <% @events.each do |event| %>
       <div class="event-card">
-        <%= event.date %>
+        <h5><%= event.date %></h5>
         <img src="<%= event.photo  %>"/>
-        <%= event.title %>
+        <h3><%= event.title %></h3>
         <%= link_to "show memory", event_path(event) %>
-        <% end %>
       </div>
+        <% end %>
 
     </div>
   </div>

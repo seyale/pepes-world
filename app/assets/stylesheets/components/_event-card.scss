@@ -1,11 +1,18 @@
 .event-container {
-  background-color: grey;
 }
 
 .event-row {
-  background-color: red;
+}
+
+.event-card {
+  background-color: white;
+  margin-bottom: 20px;
 }
 
 .event-card img {
-  width: 90vw;
+  width: 95vw;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 4px;
 }
