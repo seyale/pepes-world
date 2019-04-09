@@ -6,14 +6,11 @@
   <div class="event-row">
     <div class="col-xs-12">
 
-    <% @events.each do |event| %>
-      <div class="event-card">
-        <h5><%= event.date %></h5>
-        <img src="<%= event.photo  %>"/>
-        <h3><%= event.title %></h3>
-        <%= link_to "show memory", event_path(event) %>
-      </div>
-        <% end %>
+        <%= @latest_events.first.title %>
+        <%= @latest_events.second.title %>
+        <%= @latest_events.third.title %>
+        <%= @latest_events.fourth.title %>
+        <%= @latest_events.fifth.title %>
 
     </div>
   </div>
