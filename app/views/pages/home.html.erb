@@ -1,14 +1,23 @@
-<div class="event-container">
-  <div class="event-row">
-    <div class="col-xs-12 event-card">
-      <img src="<%= @latest_events.first.photo %>">
-      <%= @latest_events.first.title %>
-
+<div class="event-wrapper">
+  <div class="event-container">
+    <div class="event-row">
+      <div class="col-xs-12">
+        <div class="first-event">
+          <div class="first-event-left">
+            <h4><%= @latest_events.first.date %></h4>
+          </div>
+          <div class="first-event-right">
+            <h1><%= @latest_events.first.title %> </h1>
+          </div>
+          <img src="<%= @latest_events.first.photo %>">
+        </div>
+      </div>
     </div>
   </div>
 </div>
 
-<div class="last-event-container">
+<!--
+<div class="event-container">
   <div class="event-row">
     <div class="col-xs-12">
 
@@ -46,7 +55,7 @@
 
     </div>
   </div>
-</div>
+</div> -->
 <!-- delete if statement as soon as user has the option to add kids -->
 <% if false %>
 <%= link_to "+ add kid", new_kid_path %>
