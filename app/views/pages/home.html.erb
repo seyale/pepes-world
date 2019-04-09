@@ -1,21 +1,52 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
-
-
 <div class="event-container">
   <div class="event-row">
-    <div class="col-xs-12">
-
-        <%= @latest_events.first.title %>
-        <%= @latest_events.second.title %>
-        <%= @latest_events.third.title %>
-        <%= @latest_events.fourth.title %>
-        <%= @latest_events.fifth.title %>
+    <div class="col-xs-12 event-card">
+      <img src="<%= @latest_events.first.photo %>">
+      <%= @latest_events.first.title %>
 
     </div>
   </div>
 </div>
 
+<div class="last-event-container">
+  <div class="event-row">
+    <div class="col-xs-12">
+
+        <%= @latest_events.second.title %>
+
+    </div>
+  </div>
+</div>
+
+<div class="event-container">
+  <div class="event-row">
+    <div class="col-xs-12">
+
+        <%= @latest_events.third.title %>
+
+    </div>
+  </div>
+</div>
+
+<div class="event-container">
+  <div class="event-row">
+    <div class="col-xs-12">
+
+        <%= @latest_events.fourth.title %>
+
+    </div>
+  </div>
+</div>
+
+<div class="event-container">
+  <div class="event-row">
+    <div class="col-xs-12">
+
+        <%= @latest_events.fifth.title %>
+
+    </div>
+  </div>
+</div>
 <!-- delete if statement as soon as user has the option to add kids -->
 <% if false %>
 <%= link_to "+ add kid", new_kid_path %>
