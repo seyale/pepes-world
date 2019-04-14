@@ -74,19 +74,29 @@
   position: relative;
   width: 100%;
 }
+
 .img-circle {
   border-radius: 50%;
 }
+
 .img-responsive {
   display: block;
   height: auto;
   max-width: 100%;
 }
 
-.dreieck {
-  width: 0;
-  height: 0;
-  border-left: 50px solid transparent;
-  border-right: 50px solid transparent;
-  border-bottom: 100px solid black;
+.triangle {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    width: 137px;
+    height: 137px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    border-left: 3px solid black;
+    border-top: 3px solid black;
 }
