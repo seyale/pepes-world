@@ -14,7 +14,21 @@
       </div>
     </div>
   </div>
+
+<div class="event-container">
+  <div class="event-row">
+    <div class="col-sm-4">
+      <div class="second-event">
+        <div  class="ratio img-responsive img-circle" style="background-image: url(<%= @latest_events.second.photo %>);">
+        </div>
+        <h1><%= @latest_events.second.kid.name %></h1>
+        <h4><%= @latest_events.first.date %></h4>
+        <div class="dreieck"></div>
+      </div>
+    </div>
+  </div>
 </div>
+
 
 <!--
 <div class="event-container">
