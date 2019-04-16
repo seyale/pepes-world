@@ -1,159 +1,46 @@
-.event-wrapper {
-
+.event-card img {
+  max-width: 100%;
+  margin-bottom: 20px;
 }
 
-// FIRST EVENT
-
-
-.first-event {
-  position: relative;
+.event-texts {
 }
 
-.first-event img {
-  width: 70vw;
-  border: 3px solid black;
+.event-title-date {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 0 10px;
 }
 
-.first-event-left {
-  position: absolute;
-  width: 40vw;
-  left: 20px;
-  top: 50%;
-  transform: translateY(-50px);
+.event-title-date h2 {
+  max-width: 65vw;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.05em;
+  text-align: left;
+  margin-bottom: 20px;
 }
 
-.first-event-left h4 {
-  position: absolute;
-  top: 50px;
+.event-title-date h5 {
+  max-width: 25vw;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: normal;
+  letter-spacing: 0.05em;
+  color: #C4C4C4;
 }
 
-.first-event-right {
-  position: absolute;
-  right: 20px;
-  width: 40vw;
-  top: 50%;
-  transform: translateY(-50%)
+.event-description {
+  max-height: 50px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0 10px;
 }
 
-.first-event h4 {
-  color: $pepe-blue;
+.event-texts a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: black;
 }
-
-.first-event h1 {
-  color: $pepe-blue;
-}
-
-// SECOND EVENT CIRCLE BALANCE
-
-.second-event {
-}
-
-.second-event-center {
-}
-
-.second-event h1 {
-  color: $pepe-green;
-}
-
-.second-event h4 {
-  text-decoration: underline;
-}
-
-.caption div {
-  box-shadow: 0 0 5px #C8C8C8;
-  transition: all 0.3s ease 0s;
-}
-
-.img-circle {
-  border: 3px solid black;
-  border-radius: 50%;
-}
-
-.ratio {
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding-bottom: 100%;
-}
-
-// TRIANGLE
-
-$size: 60px;
-$border-size: 3px;
-$color: white;
-$border-color: black;
-.border {
-  border: none !important;
-}
-.triangle {
-  width:(($size + $border-size) * 2);
-  height:(($size + $border-size) * 2);
-  display:inline-block;
-
-  $border-real-size: $size + ($border-size * 2);
-
-  &:after, &.border:before {
-    position:absolute;
-    content:"";
-    width: 0;
-    height: 0;
-  }
-
-  &.border:before {
-    z-index:-1;
-    margin-top:(-$border-size * 2);
-    margin-left:(-$border-size * 2);
-  }
-
-  &.up:after, &.down:after {
-    border-left: $size solid transparent;
-    border-right: $size solid transparent;
-  }
-  &.left:after, &.right:after {
-    border-top: $size solid transparent;
-    border-bottom: $size solid transparent;
-  }
-  &.up:after {
-    border-bottom: ($size * 1.5) solid $color;
-  }
-  &.down:after {
-    border-top: ($size * 1.5) solid $color;
-  }
-  &.left:after {
-    border-right: ($size * 1.5) solid $color;
-  }
-  &.right:after {
-    border-left: ($size * 1.5) solid $color;
-  }
-
-  &.up:before, &.down:before {
-    border-left: $border-real-size solid transparent;
-    border-right: $border-real-size solid transparent;
-  }
-  &.left:before, &.right:before {
-    border-top: $border-real-size solid transparent;
-    border-bottom: $border-real-size solid transparent;
-  }
-  &.up:before {
-    border-bottom: ($border-real-size * 1.5) solid $border-color;
-  }
-  &.down:before {
-    border-top: ($border-real-size * 1.5) solid $border-color;
-    margin-top:-$border-size;
-  }
-  &.left:before {
-    border-right: ($border-real-size * 1.5) solid $border-color;
-  }
-  &.right:before {
-    border-left: ($border-real-size * 1.5) solid $border-color;
-    margin-left:-$border-size;
-  }
-}
-
-
-// THIRD EVENT
-
-  .third-event {
-  border: 3px solid black;
-  height: 240px;
-  }
