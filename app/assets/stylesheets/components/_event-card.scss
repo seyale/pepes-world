@@ -1,3 +1,17 @@
+.tabs-games {
+  text-align: center;
+}
+
+.tabs-games button {
+  border: none;
+  padding-top: 10px;
+}
+
+.tabs-games button:hover {
+  border: none;
+  background-color: $pepe-yellow;
+}
+
 .event-card {
   margin-bottom: 20px;
 }

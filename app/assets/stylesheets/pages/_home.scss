@@ -49,3 +49,14 @@ p {
   line-height: normal;
   letter-spacing: 0.05em;
 }
+
+a {
+  margin: 0 10px;
+  text-decoration: underline;
+  color: black;
+  font-size: 14px;
+}
+
+a:hover {
+  background-color: $pepe-yellow;
+}
