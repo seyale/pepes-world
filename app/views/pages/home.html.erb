@@ -4,7 +4,7 @@
       <div class="col-12">
         <div class="first-event">
           <div class="first-event-left">
-            <h4><%= @latest_events.first.date %></h4>
+            <h4><%= @latest_events.first.date.strftime("%d.%m.%Y") %></h4>
           </div>
           <div class="first-event-right">
             <h1><%= @latest_events.first.title %> </h1>
@@ -25,7 +25,7 @@
         <div  class="ratio img-circle" style="background-image: url(<%= @latest_events.second.photo %>);">
         </div>
       <div class="second-event-date">
-        <h4><%= @latest_events.first.date %></h4>
+        <h4><%= @latest_events.first.date.strftime("%d.%m.%Y") %></h4>
       </div>
         <span class="triangle up border"></span>
       </div>

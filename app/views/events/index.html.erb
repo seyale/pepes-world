@@ -15,7 +15,7 @@
             <div class="event-texts">
               <div class="event-title-date">
                 <h2><%= event.title %></h2>
-                <h5><%= event.date %></h5>
+                <h5><%= event.date.strftime("%d.%m.%Y") %></h5>
               </div>
               <div class="event-description">
                 <h4> <%= event.description %> </h4>
