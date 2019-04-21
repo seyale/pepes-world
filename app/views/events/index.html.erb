@@ -2,32 +2,38 @@
   <div class="tabs-games">
     <!-- Tab links -->
     <div class="tabs-underlined">
-      <button class="tablinks" onclick="openGame(event, 'list')"><h4>LIST</h4></button>
-      <button class="tablinks" onclick="openGame(event, 'map')"><h4>PLACES</h4></button>
+      <button class="tablinks" onclick="openTabs(event, 'list')"><h4>LIST</h4></button>
+      <button class="tablinks" onclick="openTabs(event, 'map')"><h4>PLACES</h4></button>
     </div>
   </div>
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <% @events.each do |event| %>
-          <div class="event-card">
-            <img src="<%= event.photo  %>"/>
-            <div class="event-texts">
-              <div class="event-title-date">
-                <h2><%= event.title %></h2>
-                <h5><%= event.date.strftime("%d.%m.%Y") %></h5>
-              </div>
-              <div class="event-description">
-                <h4> <%= event.description %> </h4>
-              </div>
-              <%= link_to "show memory", event_path(event) %>
-              <div class="divider">
-                <%= image_tag "grenze.png" %>
+  <!-- Tab content -->
+  <div id="list" class="tabcontent">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <% @events.each do |event| %>
+            <div class="event-card">
+              <img src="<%= event.photo  %>"/>
+              <div class="event-texts">
+                <div class="event-title-date">
+                  <h2><%= event.title %></h2>
+                  <h5><%= event.date.strftime("%d.%m.%Y") %></h5>
+                </div>
+                <div class="event-description">
+                  <h4> <%= event.description %> </h4>
+                </div>
+                <%= link_to "show memory", event_path(event) %>
+                <div class="divider">
+                  <%= image_tag "grenze.png" %>
+                </div>
               </div>
             </div>
-          </div>
-          <% end %>
+            <% end %>
+        </div>
       </div>
     </div>
-</div>
+  </div>
+  <div id="map" class="tabcontent">
+    Hier kommt bald eine Karte
+  </div>
 </div>
