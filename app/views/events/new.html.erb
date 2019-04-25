@@ -1,13 +1,26 @@
-<h2>Create a new memory</h2>
 
-<%= simple_form_for(@event) do |f| %>
-<%= f.error :base %>
-<%= f.input :title %>
-<%= f.date_field :date %>
-<%= f.input :place %>
-<%= f.input :description %>
-<%= f.input :kid_id, :collection => @all_kids %>
-<%= f.input :photo %>
-<%= f.input :photo_cache, as: :hidden %>
-<%= f.button :submit %>
-<% end %>
+<div class="wrapper">
+  <div class="container-form">
+    <div class="row-form">
+      <div class="col-12">
+        <h1>Create a new memory</h1>
+
+        <%= simple_form_for(@event) do |f| %>
+        <%= f.error :base %>
+        <%= f.input :title %>
+        <%= f.date_field :date %>
+        <%= f.input :place %>
+        <%= f.input :description %>
+        <%= f.input :kid_id, :collection => @all_kids %>
+        <%= f.input :photo %>
+        <%= f.input :photo_cache, as: :hidden %>
+        <%= f.button :submit %>
+        <% end %>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

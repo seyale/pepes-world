@@ -2,6 +2,7 @@
 //= require_tree .
 
 function openTabs(evt, gameName) {
+
   // Declare all variables
   var i, tabcontent, tablinks;
 
@@ -22,4 +23,4 @@ function openTabs(evt, gameName) {
   evt.currentTarget.className += " active";
 }
 
-document.querySelector('.tablinks').click()
+document.querySelector('.tablinks').click();
